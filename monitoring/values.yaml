@@ -6,7 +6,7 @@ fluent-bit:
   image:
     fluent_bit:
       repository: fluent/fluent-bit
-      tag: 0.12.15
+      tag: 0.13.0
     pullPolicy: Always
   
   backend:
@@ -47,7 +47,7 @@ fluent-bit:
   env: []
   
   ## Annotations to add to the DaemonSet's Pods
-  podAnnotation: {}
+  podAnnotations: {}
   
   ## ConfigMap override where fullname is {{.Release.Name}}-{{.Values.existingConfigMap}}
   ## Defining existingConfigMap will cause templates/config.yaml
@@ -91,6 +91,7 @@ fluent-bit:
     kubeURL: https://kubernetes.default.svc:443
     kubeCAFile: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
     kubeTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    kubeTag: kube
   # If true, check to see if the log field content is a JSON string map, if so,
   # it append the map fields as part of the log structure.
   #  mergeJSONLog: true

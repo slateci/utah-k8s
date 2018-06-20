@@ -1,10 +1,7 @@
 dependencies:
-  - name: elasticsearch
-    version: 0.0
-    repository: ~/elasticsearch
+  - name: kibana 
+    version: 0.4.1
+    repository: '@stable'
   - name: fluent-bit
-    version: 0.12.15
-    repository: https://github.com/kubernetes/charts/tree/master/stable/fluent-bit
-  - name: kibana
-    version: 6.0.0
-    repository: https://github.com/kubernetes/charts/tree/master/stable/kibana
+    version: 0.4.1
+    repository: '@stable'
